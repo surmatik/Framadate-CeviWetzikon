@@ -19,7 +19,7 @@ COPY apache.conf /etc/apache2/sites-available/000-default.conf
 
 # Framadate Configuration
 COPY framadate-config.php /var/www/framadate/app/inc/config.php
-COPY framadate-logo.png /var/www/framadate/images/logo-framadate.png
+COPY ./images /var/www/framadate/images
 COPY framadate-style.css /var/www/framadate/css/custom-style.css
 RUN cat /var/www/framadate/css/custom-style.css >> /var/www/framadate/css/style.css
 

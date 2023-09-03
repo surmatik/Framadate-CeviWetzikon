@@ -29,14 +29,21 @@ i {
 
 /* Startseite */
 span.btn.btn-primary.btn-lg {
-    background-color: #10403B;
+    background-color: #267365;
 }
 span.btn.btn-info.btn-lg {
-    background-color: #127369;
+    background-color: #267365;
 }
 span.btn.btn-warning.btn-lg {
     background-color: #4C5958;
     border: 0;
 }
+.opacity img {
+    height: 200px;
+}
 
-
+/* Create Pool */
+button.btn.btn-success {
+    background-color: #267365;
+    border: 0;
+}
