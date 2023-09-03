@@ -1,0 +1,42 @@
+/* ==== Custom CSS === */
+
+/* General */
+body {
+    background-color: #ebebeb;
+}
+.container.ombre {
+    background-color: #f1f2f4;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px #CCCCCC;
+    border-top: 10px solid #267365;
+}
+header.clearfix {
+    background-color: #f1f2f4;
+    padding: 20px 20px;
+}
+.trait.col-xs-12 {
+    display: none;
+}
+main {
+    padding-top: 20px;
+    background-color: #fff;
+}
+i {
+    color: #000;
+    font-style: inherit;
+    font-weight: bold;
+}
+
+/* Startseite */
+span.btn.btn-primary.btn-lg {
+    background-color: #10403B;
+}
+span.btn.btn-info.btn-lg {
+    background-color: #127369;
+}
+span.btn.btn-warning.btn-lg {
+    background-color: #4C5958;
+    border: 0;
+}
+
+
