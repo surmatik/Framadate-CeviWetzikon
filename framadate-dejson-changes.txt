@@ -1,0 +1,3 @@
+"datepicker": "dd.mm.yy"
+"datetime_parseformat": "d.m.y"
+"dd/mm/yyyy": "dd.mm.yy"
