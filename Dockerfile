@@ -11,15 +11,14 @@ RUN docker-php-ext-install pdo pdo_mysql intl && \
 RUN mkdir -p /var/www/framadate
 COPY ./app /var/www/framadate
 
-# Copy .htaccess file
-COPY framadate-htaccess.txt /var/www/framadate/.htaccess
-
 # Apache Configuration
 COPY apache.conf /etc/apache2/sites-available/000-default.conf 
 
 # Framadate Configuration
 COPY framadate-config.php /var/www/framadate/app/inc/config.php
+COPY framadate-htaccess.txt /var/www/framadate/.htaccess
 COPY ./images /var/www/framadate/images
+COPY ./tpl /var/www/framadate/tpl
 COPY framadate-style.css /var/www/framadate/css/custom-style.css
 RUN cat /var/www/framadate/css/custom-style.css >> /var/www/framadate/css/style.css
 

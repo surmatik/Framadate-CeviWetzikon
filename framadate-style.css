@@ -3,28 +3,29 @@
 /* General */
 body {
     background-color: #ebebeb;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 .container.ombre {
-    background-color: #f1f2f4;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 2px #CCCCCC;
-    border-top: 10px solid #267365;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
-header.clearfix {
-    background-color: #f1f2f4;
-    padding: 20px 20px;
+.ombre {
+    background-color: #ebebeb;
+    background-image: url('images/background.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
 }
+
 .trait.col-xs-12 {
     display: none;
 }
-main {
-    padding-top: 20px;
-    background-color: #fff;
-}
+
 i {
     color: #000;
-    font-style: inherit;
-    font-weight: bold;
 }
 
 /* Startseite */
@@ -51,4 +52,125 @@ button.btn.btn-success {
 /* Pool Seite */
 .jumbotron {
     background-color: #fff;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #267365;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 2; 
+}
+a.button i {
+    color: #fff;
+}
+
+header.header-cevi {
+    background-color: #fff;
+    padding: 20px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+}
+header.header-cevi a img {
+    height: 50px;
+}
+.header-left {
+    flex: 1;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-right .time {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.header-right a.button {
+    margin: 0 10px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.button-dropdown {
+    background-color: #267365;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+
+.dropdown-content a:hover {
+    background-color: #267365;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .button-dropdown {
+    background-color: #267365;
+    color: #fff;
+}
+
+.home {
+    text-align: center;
+    padding: 50px 0;
+}
+.home h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+.home p {
+    font-size: 20px;
+}
+.home .buttons {
+    margin-top: 50px;
+}
+.home .buttons a.button {
+    margin: 0 10px;
+}
+.home img {
+    margin-top: 50px;
+    width: 700px;
+}
+
+.footer {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
 }
