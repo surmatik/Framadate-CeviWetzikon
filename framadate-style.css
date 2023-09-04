@@ -47,3 +47,8 @@ button.btn.btn-success {
     background-color: #267365;
     border: 0;
 }
+
+/* Pool Seite */
+.jumbotron {
+    background-color: #fff;
+}
