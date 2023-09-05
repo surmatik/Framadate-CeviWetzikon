@@ -1,40 +1,31 @@
-# Framadate Docker Deployment
+# Framadate-Docker Cevi Wetzikon
 
-This repository provides a Docker-based deployment setup for Framadate, a popular online scheduling tool developed by Framasoft.
+Ziel: eigene Nuddel / Doodle Alternative für den Cevi Wetzikon
 
-## Prerequisites
+## ToDos
 
-- Docker
-- Git
+**Framadate**
+- [x] eigenes Framedate Docker Image
+- [x] Framedate Config
+- [ ] Framedate Mail --> SMTP ist im Moment disable
 
-## Installation
+**Cevi Wetzikon Design**
+Moderneres & schöneres Design
+- [ ] Allgemeine Elemente
+- [x] Home Seite
+- [ ] Termin Umfrage erstellen Seite
+- [ ] klassische Umfrage erstellen Seite
+- [ ] Meine Umfragen Seite
+- [x] Docs Seite
+- [ ] CSS aufräumen
 
-1. Clone this repository
+**Erweiterungen**
+- [x] Markdown Docs Seiten Funktion + Automation
+- [ ] Inhalt Docs Seiten
+- [ ] Status / Public Monitoring Seite
 
-   ```bash
-   git clone https://github.com/surmatik/Framadate-Docker.git
-   cd Framadate-Docker
-   ```
-2. Clone the Framadate application into the app directory
-   ```bash
-   git clone https://framagit.org/framasoft/framadate/framadate.git app
-   ```
-3. Edit the apache.conf file to set your domain under 'ServerName'.
-   ```bash
-   nano apache.conf
-
-   ServerName your-domain.com
-   ```
-4. Build the Docker image
-   ```bash
-   docker-compose build
-   ```
-5. Start Containers
-   ```bash
-   docker-compose up -d
-   ```
-
-## Accessing the Web Interface
-After running the above steps, you can access the Framadate web interface by navigating to your specified domain in your web browser. You'll be prompted to configure Framadate.
-
-Database Servername: mysql:host=mysql;dbname=framadate;port=3306
+**Deployment**
+- [ ] Deployment Plan (dev & live)
+- [ ] Backup & Restore
+- [ ] Monitoring
+- [ ] Dokumentation
