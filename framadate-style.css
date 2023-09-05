@@ -1,8 +1,25 @@
-/* ==== Custom CSS === */
+/* ============================================================
 
-/* General */
+   Custom CSS for Framedate-Docker deployment
+   Autor: Lino
+   
+   The content of this file will be automatically copied during the
+   Docker build below into the file /var/www/framadate/css/custom-style.css.
+
+   ============================================================ */
+
+
+/* === Colors === */
+:root {
+    --main-highlight-color: #267365;
+    --main-bg-color: #ebebeb;
+    --content-bg-color: #fff;
+    --content-text-color: #000;
+}
+
+/* === General Styles === */
 body {
-    background-color: #ebebeb;
+    background-color: var(--main-bg-color);
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -17,19 +34,14 @@ body {
     min-height: 100vh;
 }
 .ombre {
-    background-color: #ebebeb;
+    background-color: var(--main-bg-color);
     background-image: url('../images/background.png');
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
 }
-
 .trait.col-xs-12 {
     display: none;
-}
-
-i {
-    color: #000;
 }
 
 h1 {
@@ -37,10 +49,13 @@ h1 {
     font-weight: 600;
     margin: 0 0 20px 0;
 }
+p {
+    color: var(--content-text-color);
+}
 a.button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #267365;
+    background-color: var(--main-highlight-color);
     color: #fff;
     border-radius: 25px;
     text-decoration: none;
@@ -57,79 +72,7 @@ a.button i {
     }
 }
 
-/* Startseite */
-span.btn.btn-primary.btn-lg {
-    background-color: #267365;
-}
-span.btn.btn-info.btn-lg {
-    background-color: #267365;
-}
-span.btn.btn-warning.btn-lg {
-    background-color: #4C5958;
-    border: 0;
-}
-.opacity img {
-    height: 200px;
-}
 
-/* Create Pool */
-button.btn.btn-success {
-    background-color: #267365;
-    border: 0;
-}
-
-#form-block, #selected-days.row, .col-md-8.col-md-offset-2 {
-    background-color: #fff;
-    border-radius: 10px;
-    border-top: 10px solid #267365;
-    padding: 30px;
-    margin-right: 150px;
-    margin-left: 150px;
-}
-
-@media (min-width: 992px) {
-    .col-md-offset-2, .col-md-offset-1 {
-        margin-left: 0;
-    }
-    .col-md-8, .col-md-10 {
-        width: 100%;
-    }
-}
-@media (min-width: 768px) {
-    .col-sm-4 {
-        width: 180px;
-    }
-    .col-sm-8 {
-        width: calc(100% - 180px);
-    }
-}
-@media (max-width: 992px) {
-    #form-block, #selected-days.row {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-}
-
-.form-horizontal .control-label {
-    text-align: left;
-}
-label.col-sm-4.control-label, a.optionnal-parameters.lead {
-    margin-left: -10px;
-}
-a.optionnal-parameters.lead {
-    color: #333333;
-    font-weight: 700;
-}
-.form-horizontal .form-group {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-
-/* Pool Seite */
-.jumbotron {
-    background-color: #fff;
-}
 
 /*======Header======*/
 header.header-cevi {
@@ -166,7 +109,7 @@ header.header-cevi a img {
     display: inline-block;
 }
 .button-dropdown {
-    background-color: #267365;
+    background-color: var(--main-highlight-color);
     color: #fff;
     border-radius: 25px;
     padding: 10px 20px;
@@ -192,14 +135,14 @@ header.header-cevi a img {
     color: #000;
 }
 .dropdown-content a:hover {
-    background-color: #267365;
+    background-color: var(--main-highlight-color);
     color: #fff;
 }
 .dropdown:hover .dropdown-content {
     display: block;
 }
 .dropdown:hover .button-dropdown {
-    background-color: #267365;
+    background-color: var(--main-highlight-color);
     color: #fff;
 }
 @media (max-width: 992px) {
@@ -216,7 +159,39 @@ header.header-cevi a img {
 
 
 
+/* === Footer === */
+.footer {
+    background-color: #fff;
+    color: var(--content-text-color);
+    padding: 20px;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 50px;
+}
+.footer a {
+    color: var(--content-text-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
 
+
+
+/* === Home Page === */
+span.btn.btn-primary.btn-lg {
+    background-color: var(--main-highlight-color);
+}
+span.btn.btn-info.btn-lg {
+    background-color: var(--main-highlight-color);
+}
+span.btn.btn-warning.btn-lg {
+    background-color: #4C5958;
+    border: 0;
+}
+.opacity img {
+    height: 200px;
+}
 .home {
     text-align: center;
     padding: 50px 0;
@@ -255,19 +230,60 @@ header.header-cevi a img {
 
 
 
-.footer {
+/* === Create Pool Page === */
+button.btn.btn-success {
+    background-color: var(--main-highlight-color);
+    border: 0;
+}
+#form-block, #selected-days.row{
     background-color: #fff;
-    color: #000;
-    padding: 20px;
-    text-align: center;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-top: 50px;
+    border-radius: 10px;
+    border-top: 10px solid var(--main-highlight-color);
+    padding: 30px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+.form-horizontal .control-label {
+    text-align: left;
+}
+label.col-sm-4.control-label, a.optionnal-parameters.lead {
+    margin-left: -10px;
+}
+a.optionnal-parameters.lead {
+    color: #333333;
+    font-weight: 700;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
 }
 
-.footer a {
-    color: #000;
-    text-decoration: none;
-    margin: 0 10px;
+@media (min-width: 992px) {
+    .col-md-offset-2, .col-md-offset-1 {
+        margin-left: 0;
+    }
+    .col-md-8, .col-md-10 {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .col-sm-4 {
+        width: 180px;
+    }
+    .col-sm-8 {
+        width: calc(100% - 180px);
+    }
+}
+@media (max-width: 992px) {
+    #form-block, #selected-days.row {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+
+/* === Pool Page === */
+.jumbotron {
+    background-color: #fff;
 }
