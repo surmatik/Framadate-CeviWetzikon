@@ -17,10 +17,10 @@
 
     <link rel="stylesheet" href="{'css/bootstrap.min.css'|resource}">
     <link rel="stylesheet" href="{'css/datepicker3.css'|resource}">
-    <link rel="stylesheet" href="{'css/style.css'|resource}">
     <link rel="stylesheet" href="{'css/frama.css'|resource}">
     <link rel="stylesheet" href="{'css/print.css'|resource}" media="print">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="{'css/style.css'|resource}">
     <script src="{'js/jquery-3.6.0.min.js'|resource}"></script>
     <script src="{'js/bootstrap.min.js'|resource}"></script>
     <script src="{'js/bootstrap-datepicker.js'|resource}"></script>

@@ -10,4 +10,10 @@
         </div>
         <img src="images/framadate.png" alt="">
     </div>
+    <style>
+        main {
+            background-color: #fff0;
+            border-top: 0;
+        }
+    </style>
 {/block}

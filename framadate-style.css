@@ -26,6 +26,11 @@ body {
     position: relative;
     min-height: 100%;
 }
+body::after {
+    content: '';
+    display: block;
+    height: 50px;
+  }
 .container.ombre {
     padding: 0;
     margin: 0;
@@ -46,13 +51,15 @@ body {
 
 h1 {
     font-size: 36px;
-    font-weight: 600;
     margin: 0 0 20px 0;
+}
+h1, h2, h3 {
+    font-weight: 600;
 }
 p {
     color: var(--content-text-color);
 }
-a.button {
+a.button, input#add_comment {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--main-highlight-color);
@@ -74,7 +81,47 @@ a.button i {
 
 
 
-/*======Header======*/
+/*===General Page*/
+main {
+    background-color: #fff;
+    border-radius: 10px;
+    border-top: 10px solid var(--main-highlight-color);
+    padding: 30px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+@media (min-width: 992px) {
+    .col-md-offset-2, .col-md-offset-1 {
+        margin-left: 0;
+    }
+    .col-md-8, .col-md-10 {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .col-sm-4 {
+        width: 180px;
+    }
+    .col-sm-8 {
+        width: calc(100% - 180px);
+        padding: 0;
+    }
+}
+@media (max-width: 992px) {
+    main {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+/*===Header===*/
 header.header-cevi {
     background-color: #fff;
     padding: 20px 150px;
@@ -169,6 +216,7 @@ header.header-cevi a img {
     bottom: 0;
     left: 0;
     margin-top: 50px;
+    position: absolute;
 }
 .footer a {
     color: var(--content-text-color);
@@ -235,14 +283,6 @@ button.btn.btn-success {
     background-color: var(--main-highlight-color);
     border: 0;
 }
-#form-block, #selected-days.row{
-    background-color: #fff;
-    border-radius: 10px;
-    border-top: 10px solid var(--main-highlight-color);
-    padding: 30px;
-    margin-right: 150px;
-    margin-left: 150px;
-}
 .form-horizontal .control-label {
     text-align: left;
 }
@@ -250,40 +290,54 @@ label.col-sm-4.control-label, a.optionnal-parameters.lead {
     margin-left: -10px;
 }
 a.optionnal-parameters.lead {
-    color: #333333;
+    color: #000000;
     font-weight: 700;
 }
-.form-horizontal .form-group {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-@media (min-width: 992px) {
-    .col-md-offset-2, .col-md-offset-1 {
-        margin-left: 0;
-    }
-    .col-md-8, .col-md-10 {
-        width: 100%;
-    }
-}
-@media (min-width: 768px) {
-    .col-sm-4 {
-        width: 180px;
-    }
-    .col-sm-8 {
-        width: calc(100% - 180px);
-    }
-}
-@media (max-width: 992px) {
-    #form-block, #selected-days.row {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-}
-
 
 
 /* === Pool Page === */
 .jumbotron {
     background-color: #fff;
+}
+.jumbotron h3, .jumbotron .js-title {
+    font-size: 36px;
+}
+td.bg-info.btn-edit, td.bg-info {
+    background-color: #fff;
+}
+.bg-primary, .bg-primary a, a.bg-primary:focus, a.bg-primary:hover {
+    background-color: var(--main-highlight-color);
+}
+th#M2 {
+    border-radius: 10px 10px 0 0;
+    background-color: var(--main-highlight-color);
+}
+.bg-danger, a.bg-danger:hover {
+    border: 1px solid #d04437;
+    background-color: #fff8f7;
+}
+.alert.alert-dismissible.alert-success.hidden-print {
+    background-color: #f3f9f4;
+    border: 1px solid #6fc780;
+}
+.alert.alert-info {
+    background-color: #DEEBFF;
+    border: 1px solid #5297ff;
+}
+.bg-info, a.bg-info:hover {
+    background-color: #e3e3e3;
+}
+i.glyphicon.glyphicon-remove.text-danger {
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 100px;
+    margin-bottom: 5px;
+    color: #d04437;
+}
+i.glyphicon.glyphicon-plus.text-success {
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 100px;
+    margin-bottom: 5px;
+    color: var(--main-highlight-color);
 }
