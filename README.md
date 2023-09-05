@@ -37,4 +37,5 @@ Moderneres & schöneres Design
 DB Server Name: mysql:host=mysql;dbname=framadate;port=3306
 
 DB User: framadate
+
 DB Password: your_password
