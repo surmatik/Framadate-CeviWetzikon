@@ -4,7 +4,7 @@ Ziel: eigene Nuddel / Doodle Alternative für den Cevi Wetzikon
 
 ## ToDos
 
-**Framadate**
+### Framadate
 
 - [x] eigenes Framedate Docker Image
 - [x] Framedate Config
@@ -13,7 +13,7 @@ Ziel: eigene Nuddel / Doodle Alternative für den Cevi Wetzikon
 - [ ] Umstellung von MySQL zu PostgresSQL
 
 
-**Cevi Wetzikon Design**
+### Cevi Wetzikon Design
 
 Moderneres & schöneres Design
 
@@ -29,14 +29,14 @@ Moderneres & schöneres Design
 - [ ] Text Standars erstellen & anwenden (Schritgrösse, Farbe, ...)
 
 
-**Erweiterungen**
+### Erweiterungen
 
 - [x] Markdown Docs Seiten Funktion + Automation
 - [ ] Inhalt Docs Seiten (Datenschutz, Hilfe, Kontakt)
 - [ ] Status / Public Monitoring Seite
 
 
-**Deployment**
+### Deployment
 
 - [ ] Deployment Plan (dev & live)
 - [ ] Backup & Restore
@@ -49,3 +49,6 @@ Moderneres & schöneres Design
 DB Server Name: mysql:host=mysql;dbname=framadate;port=3306 <br>
 DB User: framadate <br>
 DB Password: your_password
+
+
+<img src="images/framadate.png" style="width: 600px" />
