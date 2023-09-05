@@ -37,6 +37,25 @@ h1 {
     font-weight: 600;
     margin: 0 0 20px 0;
 }
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #267365;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 2; 
+}
+a.button i {
+    color: #fff;
+}
+@media (max-width: 992px) {
+    a.button {
+        font-size: 13px;
+    }
+}
 
 /* Startseite */
 span.btn.btn-primary.btn-lg {
@@ -59,16 +78,13 @@ button.btn.btn-success {
     border: 0;
 }
 
-.row {
-    margin-right: 150px;
-    margin-left: 150px;
-}
-
-.row {
+#form-block, #selected-days.row, .col-md-8.col-md-offset-2 {
     background-color: #fff;
     border-radius: 10px;
     border-top: 10px solid #267365;
     padding: 30px;
+    margin-right: 150px;
+    margin-left: 150px;
 }
 
 @media (min-width: 992px) {
@@ -85,6 +101,12 @@ button.btn.btn-success {
     }
     .col-sm-8 {
         width: calc(100% - 180px);
+    }
+}
+@media (max-width: 992px) {
+    #form-block, #selected-days.row {
+        margin-right: 20px;
+        margin-left: 20px;
     }
 }
 
@@ -109,21 +131,7 @@ a.optionnal-parameters.lead {
     background-color: #fff;
 }
 
-a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #267365;
-    color: #fff;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    line-height: 2; 
-}
-a.button i {
-    color: #fff;
-}
-
+/*======Header======*/
 header.header-cevi {
     background-color: #fff;
     padding: 20px 150px;
@@ -157,7 +165,6 @@ header.header-cevi a img {
     position: relative;
     display: inline-block;
 }
-
 .button-dropdown {
     background-color: #267365;
     color: #fff;
@@ -167,7 +174,6 @@ header.header-cevi a img {
     cursor: pointer;
     text-decoration: none;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -175,28 +181,41 @@ header.header-cevi a img {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    left: 0%;
+    transform: translateX(-50%);
+    padding-top: 20px;
 }
-
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     color: #000;
 }
-
 .dropdown-content a:hover {
     background-color: #267365;
     color: #fff;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .dropdown:hover .button-dropdown {
     background-color: #267365;
     color: #fff;
 }
+@media (max-width: 992px) {
+    header.header-cevi {
+        padding: 20px 20px;
+    }
+    header.header-cevi a img {
+        height: 30px;
+    }
+    .header-right .time {
+        display: none;
+    }
+}
+
+
+
 
 .home {
     text-align: center;
@@ -217,17 +236,34 @@ header.header-cevi a img {
 .home img {
     margin-top: 50px;
     width: 700px;
+    border-radius: 10px;
 }
+@media (max-width: 992px) {
+    .home {
+        padding: 50px 20px;
+    }
+    .home h1 {
+        font-size: 40px;
+    }
+    .home img {
+        width: 80%;
+    }
+    .home .buttons a.button {
+        margin: 5px 10px;
+    }
+}
+
+
 
 .footer {
     background-color: #fff;
     color: #000;
     padding: 20px;
     text-align: center;
-    position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
+    margin-top: 50px;
 }
 
 .footer a {
