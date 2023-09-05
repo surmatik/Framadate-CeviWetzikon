@@ -21,7 +21,7 @@ Moderneres & schöneres Design
 
 **Erweiterungen**
 - [x] Markdown Docs Seiten Funktion + Automation
-- [ ] Inhalt Docs Seiten
+- [ ] Inhalt Docs Seiten (Datenschutz, Hilfe, Kontakt)
 - [ ] Status / Public Monitoring Seite
 
 **Deployment**
