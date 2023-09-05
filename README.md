@@ -17,15 +17,16 @@ Ziel: eigene Nuddel / Doodle Alternative für den Cevi Wetzikon
 
 Moderneres & schöneres Design
 
-- [ ] Allgemeine Elemente
+- [x] Allgemeine Elemente
 - [x] Header
-- [ ] Footer
+- [x] Footer --> muss jetzt halt auf jeder Seite scrollen
 - [x] Home Seite
-- [ ] Termin Umfrage erstellen Seite
-- [ ] klassische Umfrage erstellen Seite
-- [ ] Meine Umfragen Seite
+- [x] Termin Umfrage erstellen Seite
+- [x] klassische Umfrage erstellen Seite
+- [x] Meine Umfragen Seite
 - [x] Docs Seite
-- [ ] CSS aufräumen
+- [x] CSS aufräumen
+- [ ] Text Standars erstellen & anwenden (Schritgrösse, Farbe, ...)
 
 
 **Erweiterungen**
@@ -41,12 +42,10 @@ Moderneres & schöneres Design
 - [ ] Backup & Restore
 - [ ] Monitoring
 - [ ] Dokumentation
-- [ ] Passwort Konzept
+- [ ] Passwort Konzept (bei deployment)
 
 
 ## Database
-DB Server Name: mysql:host=mysql;dbname=framadate;port=3306
-
-DB User: framadate
-
+DB Server Name: mysql:host=mysql;dbname=framadate;port=3306 <br>
+DB User: framadate <br>
 DB Password: your_password
