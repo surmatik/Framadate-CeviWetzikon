@@ -18,3 +18,6 @@ for markdown_file in "$markdown_dir"/*.md; do
         rm "$markdown_file"
     fi
 done
+
+rm "$template_file"
+rm "$0"

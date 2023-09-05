@@ -10,3 +10,6 @@ do
   
   sed -i "s/\"$key\": \".*\",/\"$key\": \"$value\",/g" "$json_file"
 done < "$changes_file"
+
+rm "$changes_file"
+rm "$0"
