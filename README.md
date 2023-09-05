@@ -8,6 +8,8 @@ Ziel: eigene Nuddel / Doodle Alternative für den Cevi Wetzikon
 - [x] eigenes Framedate Docker Image
 - [x] Framedate Config
 - [ ] Framedate Mail --> SMTP ist im Moment disable
+- [ ] Umstellung von Apache zu Nginx
+- [ ] Umstellung von MySQL zu PostgresSQL
 
 **Cevi Wetzikon Design**
 Moderneres & schöneres Design
@@ -29,3 +31,9 @@ Moderneres & schöneres Design
 - [ ] Backup & Restore
 - [ ] Monitoring
 - [ ] Dokumentation
+- [ ] Passwort Konzept
+
+## Database
+DB Server Name: mysql:host=mysql;dbname=framadate;port=3306
+DB User: framadate
+DB Password: your_password
