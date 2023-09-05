@@ -21,8 +21,7 @@
 include '../tpl/header.tpl';
 ?>
 
-<main>
-    <div class="row" style="" id="form-block">
+    <div class="main-content">
         <!-- INSERT_CONTENT_HERE -->
     </div> 
 </main>
