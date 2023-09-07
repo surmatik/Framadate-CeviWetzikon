@@ -342,3 +342,15 @@ i.glyphicon.glyphicon-plus.text-success {
     margin-bottom: 5px;
     color: var(--main-highlight-color);
 }
+div.comment {
+    border-left: 0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    display: flex;
+}
+.comment-image {
+    margin: 5px 10px 0 0;
+}
+img.person-placeholder {
+    height: 30px;
+}

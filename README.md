@@ -11,6 +11,7 @@ Ziel: eigene Nuddel / Doodle Alternative für den Cevi Wetzikon
 - [ ] Framedate Mail --> SMTP ist im Moment disable
 - [ ] Umstellung von Apache zu Nginx
 - [ ] Umstellung von MySQL zu PostgresSQL
+- [ ] Admin Bereich absichern
 
 
 ### Cevi Wetzikon Design
@@ -26,6 +27,7 @@ Moderneres & schöneres Design
 - [x] Meine Umfragen Seite
 - [x] Docs Seite
 - [x] CSS aufräumen
+- [x] Kommentar Design
 - [ ] Text Standars erstellen & anwenden (Schritgrösse, Farbe, ...)
 
 
