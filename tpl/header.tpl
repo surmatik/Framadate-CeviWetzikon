@@ -5,7 +5,7 @@
             </a>
         </div>
         <div class="header-right">
-            <p class="time">Cevi Wetzikon Doodle Tool</p>
+            <p class="time">Cevi Wetzikon Pool Tool</p>
             <a href="/find_polls.php" class="button">Meine Umfragen</a>
             <div class="dropdown">
                 <a href="#" class="button button-dropdown">+</a>

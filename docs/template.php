@@ -15,7 +15,7 @@
     <script src="../js/locales/bootstrap-datepicker.de.js"></script>
     <script src="../js/core.js"></script>
 </head>
-<body>
+<body class="container ombre">
 
 <?php
 include '../tpl/header.tpl';
