@@ -23,7 +23,7 @@
 // const APP_URL = '<www.mydomain.fr>';
 
 // Application name
-const NOMAPPLICATION = 'Cevi Wetzikon';
+const NOMAPPLICATION = 'Cevi Wetzikon Pool Tool';
 
 // Database administrator email
 const ADRESSEMAILADMIN = 'admin@linoo.ch';
