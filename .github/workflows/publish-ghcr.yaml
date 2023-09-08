@@ -8,8 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Bild erstellen und veröffentlichen
-        run:
-          echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u surmatik --password-stdin
-          docker build . --tag ghcr.io/surmatik/framadate-ceviwetzikon:latest
+      - name: Bild erstellen
+        run: docker build . --tag ghcr.io/surmatik/framadate-ceviwetzikon:latest
+      - name: Bei GHCR anmelden und veröffentlichen
+        run: |
+          echo "${{ secrets.GH_PAT }}" | docker login ghcr.io -u surmatik --password-stdin
           docker push ghcr.io/surmatik/framadate-ceviwetzikon:latest
