@@ -13,4 +13,4 @@ DB User: framadate <br>
 DB Password: your_password
 
 
-<img src="images/framadate.png" style="width: 600px" />
+<img src="/framadate/images/framadate.png" style="width: 600px" />
