@@ -1,4 +1,4 @@
-name: Docker Image CI for GHCR
+name: Docker-Image CI für GHCR
 
 on:
   push
@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build and push image
+      - name: Bild erstellen und veröffentlichen
         run:
-          docker login --username surmatik --password ${{ secrets.GH_PAT }} ghcr.io
+          echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u surmatik --password-stdin
           docker build . --tag ghcr.io/surmatik/framadate-ceviwetzikon:latest
           docker push ghcr.io/surmatik/framadate-ceviwetzikon:latest
