@@ -9,7 +9,7 @@ RUN docker-php-ext-install pdo pdo_mysql intl && \
 
 # Framadate Folder
 RUN mkdir -p /var/www/framadate
-COPY ./app /var/www/framadate
+RUN git clone https://framagit.org/framasoft/framadate/framadate.git /var/www/framadate
 
 # Apache Configuration
 COPY ./framadate/apache.conf /etc/apache2/sites-available/000-default.conf 
