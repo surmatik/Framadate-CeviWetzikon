@@ -12,29 +12,29 @@ RUN mkdir -p /var/www/framadate
 COPY ./app /var/www/framadate
 
 # Apache Configuration
-COPY apache.conf /etc/apache2/sites-available/000-default.conf 
+COPY ./framadate/apache.conf /etc/apache2/sites-available/000-default.conf 
 
 # Framadate Configuration
 COPY framadate-config.php /var/www/framadate/app/inc/config.php
-COPY framadate-htaccess.txt /var/www/framadate/.htaccess
+COPY ./framadate/framadate-htaccess.txt /var/www/framadate/.htaccess
 
-COPY ./images /var/www/framadate/images
-COPY ./images/favicon.ico /var/www/framadate/favicon.ico
+COPY ./framadate/./images /var/www/framadate/images
+COPY ./framadate/./images/favicon.ico /var/www/framadate/favicon.ico
 
-COPY ./tpl /var/www/framadate/tpl
+COPY ./framadate/./tpl /var/www/framadate/tpl
 
-COPY framadate-style.css /var/www/framadate/css/custom-style.css
+COPY ./framadate/framadate-style.css /var/www/framadate/css/custom-style.css
 RUN cat /var/www/framadate/css/custom-style.css >> /var/www/framadate/css/style.css
 
-COPY php-create_classic_poll.php /var/www/framadate/create_classic_poll.php
+COPY ./framadate/php-create_classic_poll.php /var/www/framadate/create_classic_poll.php
 
-COPY framadate-dejson-changes.txt /var/www/framadate/locale/framadate-dejson-changes.txt
-COPY script-dejsonchanges.sh /var/www/framadate/locale/script-dejsonchanges.sh
+COPY ./framadate/framadate-dejson-changes.txt /var/www/framadate/locale/framadate-dejson-changes.txt
+COPY ./framadate/script-dejsonchanges.sh /var/www/framadate/locale/script-dejsonchanges.sh
 RUN chmod +x /var/www/framadate/locale/script-dejsonchanges.sh
 RUN /var/www/framadate/locale/script-dejsonchanges.sh
 
-COPY ./docs /var/www/framadate/docs
-COPY script-mdtodocspage.sh /var/www/framadate/docs/script-mdtodocspage.sh
+COPY ./framadate/./docs /var/www/framadate/docs
+COPY ./framadate/script-mdtodocspage.sh /var/www/framadate/docs/script-mdtodocspage.sh
 RUN chmod +x /var/www/framadate/docs/script-mdtodocspage.sh
 RUN /var/www/framadate/docs/script-mdtodocspage.sh
 
