@@ -15,7 +15,6 @@ COPY ./app /var/www/framadate
 COPY ./framadate/apache.conf /etc/apache2/sites-available/000-default.conf 
 
 # Framadate Configuration
-COPY framadate-config.php /var/www/framadate/app/inc/config.php
 COPY ./framadate/framadate-htaccess.txt /var/www/framadate/.htaccess
 
 COPY ./framadate/./images /var/www/framadate/images
