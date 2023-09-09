@@ -4,3 +4,4 @@
 "Comments of polled people": "Kommentare"
 "Best choice": "Beste Option"
 "Best choices": "Beste Optionen"
+"Add a comment to the poll": "Kommentar schreiben"
