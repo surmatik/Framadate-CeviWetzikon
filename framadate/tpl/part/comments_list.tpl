@@ -8,7 +8,7 @@
                     <button type="submit" name="delete_comment" value="{$comment->id|html}" class="btn btn-link" title="{__('Comments', 'Remove the comment')}"><span class="glyphicon glyphicon-remove text-danger"></span><span class="sr-only">{__('Generic', 'Remove')}</span></button>
                 {/if}
                 <div class="comment-image">
-                    <img class="person-placeholder" src="./images/person-placeholder.png">
+                    <img class="person-placeholder" id="random-image-{$comment->id|html}" src="">
                 </div>
                 <div class="comment-text">
                     <b>{$comment->name|html}</b>&nbsp;
@@ -16,6 +16,16 @@
                     <span>{$comment->comment|escape|nl2br}</span>
                 </div>
             </div>
+
+            <script>
+                // Array mit zufälligen Bild-Dateinamen
+                var randomImages = ['/images/cevianer1.png', '/images/cevianer2.png', '/images/cevianer3.png', '/images/cevianer4.png', '/images/cevianer5.png', '/images/cevianer6.png'];
+                // Zufälligen Index auswählen
+                var randomIndex = Math.floor(Math.random() * randomImages.length);
+                // Zufälliges Bild in das Bild-Element einfügen
+                var randomImage = randomImages[randomIndex];
+                document.getElementById('random-image-{$comment->id|html}').src = randomImage;
+            </script>
         {/foreach}
     {/if}
     </form>

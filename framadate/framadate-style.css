@@ -512,6 +512,7 @@ img.person-placeholder {
     background-color: #fff0;
     border: 0;
     padding: 0;
+    display: none;
 }
 table.results {
     margin: 0;
