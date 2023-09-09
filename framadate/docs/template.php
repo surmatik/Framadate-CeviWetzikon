@@ -15,15 +15,16 @@
     <script src="../js/locales/bootstrap-datepicker.de.js"></script>
     <script src="../js/core.js"></script>
 </head>
-<body class="container ombre">
+<body>
 
+<div class="container ombre">
 <?php
 include '../tpl/header.tpl';
 ?>
-
     <div class="main-content">
         <!-- INSERT_CONTENT_HERE -->
-    </div> 
+    </div>
+</div>
 </main>
 
 <?php

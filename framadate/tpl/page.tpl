@@ -43,9 +43,10 @@
 {block name=main}{/block}
 
 </main>
+</div>
 {include file='footer.tpl'}
 
-</div> <!-- .container -->
+ <!-- .container -->
 {if isset($tracking_code)}
     {$tracking_code}
 {/if}

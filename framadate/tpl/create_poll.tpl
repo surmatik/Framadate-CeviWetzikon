@@ -14,7 +14,7 @@
     <div class="row" style="display:none" id="form-block">
         <div class="col-md-8 col-md-offset-2">
             <form name="formulaire" id="formulaire" method="POST" class="form-horizontal">
-                <h1 class="title">Umfrage erstellen</h1>
+                <h1 class="title">🚀 Umfrage erstellen</h1>
                 <div class="alert alert-info">
                     <p>
                         {__('Step 1', 'You are in the poll creation section.')}<br/>

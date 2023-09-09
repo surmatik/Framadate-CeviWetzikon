@@ -243,6 +243,8 @@ if (empty($form->title) || empty($form->admin_name) || ($config['use_smtp'] && e
 
     <script src="js/app/framadatepicker.js"></script>
     <script src="js/app/classic_poll.js"></script>
+    </main>
+    </div>
     ' . "\n";
 
     ob_start();
