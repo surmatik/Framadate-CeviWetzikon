@@ -2,8 +2,10 @@
 
 {block name=main}
     <div class="home">
-        <h1 style="display: flex; align-items: center; justify-content: center;">
-            <span style="margin-right: 20px;">🌳</span> Cevi Wetzikon <br> Pool Tool <span style="margin-left: 20px;">🌳</span>
+        <h1 class="home-title">
+            <span class="home-title-icon1">🌳</span>
+            Cevi Wetzikon <br> Pool Tool
+            <span class="home-title-icon2">🌳</span>
         </h1>
 
         <hr class="title-line">
