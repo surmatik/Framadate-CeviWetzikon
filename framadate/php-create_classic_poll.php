@@ -27,7 +27,7 @@ use Framadate\Utils;
 
 include_once __DIR__ . '/app/inc/init.php';
 
-echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">' . "\n";
+
 
 /* Service */
 /*---------*/
@@ -157,6 +157,7 @@ if (empty($form->title) || empty($form->admin_name) || ($config['use_smtp'] && e
 
         // Step 2/4 : Select choices of the poll
     } else {
+        echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">' . "\n";
         ob_start();
         include 'tpl/header.tpl';
         $headerContent = ob_get_clean();

@@ -12,7 +12,8 @@ RUN mkdir -p /var/www/framadate
 RUN git clone https://framagit.org/framasoft/framadate/framadate.git /var/www/framadate
 
 # Apache Configuration
-COPY ./framadate/apache.conf /etc/apache2/sites-available/000-default.conf 
+COPY ./framadate/apache.conf /etc/apache2/sites-available/000-default.conf
+COPY ./framadate/framadate-admin-htaccess.txt /var/www/framadate/admin/.htaccess
 
 # Framadate Configuration
 COPY ./framadate/framadate-htaccess.txt /var/www/framadate/.htaccess

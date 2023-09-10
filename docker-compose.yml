@@ -9,6 +9,7 @@ services:
       - mysql
     volumes:
       - ./framadate-config.php:/var/www/framadate/app/inc/config.php
+      - ./htpasswd:/etc/apache2/.htpasswd
   mysql:
     image: mysql:5.7
     environment:
