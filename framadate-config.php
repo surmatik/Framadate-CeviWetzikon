@@ -26,10 +26,10 @@
 const NOMAPPLICATION = 'Cevi Wetzikon Pool Tool';
 
 // Database administrator email
-const ADRESSEMAILADMIN = 'admin@linoo.ch';
+const ADRESSEMAILADMIN = 'pooltoolceviwetzikon@gmail.com';
 
 // Email for automatic responses (you should set it to "no-reply")
-const ADRESSEMAILREPONSEAUTO = '';
+const ADRESSEMAILREPONSEAUTO = 'pooltoolceviwetzikon@gmail.com';
 
 // Database server name, leave empty to use a socket
 const DB_CONNECTION_STRING = 'mysql:host=mysql;dbname=framadate;port=3306';
@@ -41,7 +41,7 @@ const DB_USER= 'framadate';
 const DB_PASSWORD = 'your_password';
 
 // Table name prefix
-const TABLENAME_PREFIX = 'fd_cevi';
+const TABLENAME_PREFIX = 'fd_';
 
 // Name of the table that stores migration script already executed
 const MIGRATION_TABLE = 'framadate_migration';
@@ -86,14 +86,15 @@ const TIME_EDIT_LINK_EMAIL = 60;
 // Config
 $config = [
     /* general config */
-    'use_smtp' => false,                     // use email for polls creation/modification/responses notification
+    'use_smtp' => true,                     // use email for polls creation/modification/responses notification
+    'use_sendmail' => true,
     'smtp_options' => [
-        'host' => 'localhost',              // SMTP server (you could add many servers (main and backup for example) : use ";" like separator
-        'auth' => false,                    // Enable SMTP authentication
-        'username' => '',                   // SMTP username
-        'password' => '',                   // SMTP password
-        'secure' => '',                     // Enable encryption (false, tls or ssl)
-        'port' => 25,                       // TCP port to connect to
+        'host' => 'smtp.gmail.com',              // SMTP server (you could add many servers (main and backup for example) : use ";" like separator
+        'auth' => true,                    // Enable SMTP authentication
+        'username' => 'pooltoolceviwetzikon@gmail.com',                   // SMTP username
+        'password' => '123',                   // SMTP password
+        'secure' => 'ssl',                     // Enable encryption (false, tls or ssl)
+        'port' => 465,                       // TCP port to connect to
     ],
     /* home */
     'show_what_is_that' => false,            // display "how to use" section

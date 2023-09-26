@@ -76,19 +76,24 @@ if (empty($form->title) || empty($form->admin_name) || ($config['use_smtp'] && e
 
         // Send confirmation by mail if enabled
         if ($config['use_smtp'] === true) {
-            $message = __('Mail', "This is the message you have to send to the people you want to poll. \nNow, you have to send this message to everyone you want to poll.");
+            $message = '<div style="text-align: center; background-color: #fff;"><img src="https://i.postimg.cc/wBj1pNyx/cevi-wetzikon.png" height="80" alt="Cevi Wetzikon Pool Tool"></div>';
+            $message .= '<br><hr><br>';
+            $message .= 'Liebe/r ' . Utils::htmlMailEscape($form->admin_name);
             $message .= '<br/><br/>';
-            $message .= Utils::htmlMailEscape($form->admin_name) . ' ' . __('Mail', 'hast just created a poll called') . ' : "' . Utils::htmlMailEscape($form->title) . '".<br/>';
-            $message .= sprintf(__('Mail', 'Thanks for filling the poll at the link above') . ' :<br/><br/><a href="%1$s">%1$s</a>', Utils::getUrlSondage($poll_id));
-
-            $message_admin = __('Mail', "This message should NOT be sent to the polled people. It is private for the poll's creator.\n\nYou can now modify it at the link above");
-            $message_admin .= sprintf(' :<br/><br/><a href="%1$s">%1$s</a>', Utils::getUrlSondage($admin_poll_id, true));
-
+            $message .= 'Deine Umfrage "' . Utils::htmlMailEscape($form->title) . '" wurde soeben erstellt.';
+            $message .= '<br><br><b>👉 Link zur Umfrage</b><br>Mit dem folgenden Link kannst du andere einladen, an deiner Umfrage teilzunehmen: <a href="' . Utils::getUrlSondage($poll_id) . '" style="color: black; text-decoration: underline;">' . Utils::getUrlSondage($poll_id) . '</a>';
+            $message .= '<br><br><b>👉 Admin Link</b><br>Verwende den folgenden Link, um alle Details deiner Umfrage zu bearbeiten: <a href="' . Utils::getUrlSondage($admin_poll_id, true) . '" style="color: black; text-decoration: underline;">' . Utils::getUrlSondage($admin_poll_id, true) . '</a>';
+        
             if ($mailService->isValidEmail($form->admin_mail)) {
-                $mailService->send($form->admin_mail, '[' . NOMAPPLICATION . '][' . __('Mail', 'Author\'s message') . '] ' . __('Generic', 'Poll') . ': ' . Utils::htmlEscape($form->title), $message_admin);
-                $mailService->send($form->admin_mail, '[' . NOMAPPLICATION . '][' . __('Mail', 'For sending to the polled users') . '] ' . __('Generic', 'Poll') . ': ' . Utils::htmlEscape($form->title), $message);
+                $subject = '🌳 Deine Cevi Umfrage ' . Utils::htmlEscape($form->title);
+                $subject = str_replace("&period;", ".", $subject);
+                $subject = mb_encode_mimeheader($subject, "UTF-8", "B");
+                $mailService->send($form->admin_mail, $subject, $message);
             }
         }
+        
+
+
 
         // Clean Form data in $_SESSION
         unset($_SESSION['form']);
