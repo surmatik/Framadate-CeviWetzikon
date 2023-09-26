@@ -36,7 +36,7 @@
                 <a href="/docs/cookie.php" class="footer-links-bottom">Cookie Richtlinien</a>
             </div>
             <div class="footer-bottom-right">
-                <a href="https://github.com/surmatik/Framadate-CeviWetzikon" target="_blank"><i class="icon fab fa-github"></i> Suramtik/Framadate-CeviWetzikon</a>
+                <a href="https://github.com/surmatik/Framadate-CeviWetzikon" target="_blank"><i class="icon fab fa-github"></i> Surmatik/Framadate-CeviWetzikon</a>
             </div>
         </div>
     </footer>
