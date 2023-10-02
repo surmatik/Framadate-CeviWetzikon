@@ -15,10 +15,10 @@ jobs:
           echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u surmatik --password-stdin
           docker push ghcr.io/surmatik/framadate-ceviwetzikon:latest
           
-      - name: Set up Tailscale
-        run: |
-          curl -fsSL https://pkgs.tailscale.com/stable/tailscale_amd64.tgz | tar -xzC /usr/local/bin
-          tailscale up --authkey=${{ secrets.TAILSCALE_AUTHKEY }}
+      - name: Tailscale
+        uses: tailscale/github-action@v2
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           
       - name: Execute Webhook
         run: |
