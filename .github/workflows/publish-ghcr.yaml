@@ -1,7 +1,9 @@
 name: Docker-Image CI für GHCR
 
 on:
-  push
+  push:
+    branches:
+      - main
 
 jobs:
   build_and_publish:
@@ -14,3 +16,12 @@ jobs:
         run: |
           echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u surmatik --password-stdin
           docker push ghcr.io/surmatik/framadate-ceviwetzikon:latest
+          
+      - name: Set up Tailscale
+        run: |
+          curl -fsSL https://pkgs.tailscale.com/stable/tailscale_${TAILSCALE_VERSION}_amd64.tgz | tar -xzC /usr/local/bin
+          tailscale up --authkey=${{ secrets.TAILSCALE_AUTHKEY }}
+          
+      - name: Execute Webhook
+        run: |
+          curl -X POST https://portainer.surmatik.ch/api/webhooks/26173694-7824-413c-9ae0-9ccc760de4cc

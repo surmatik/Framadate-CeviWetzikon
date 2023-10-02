@@ -76,8 +76,8 @@ if (empty($form->title) || empty($form->admin_name) || ($config['use_smtp'] && e
 
         // Send confirmation by mail if enabled
         if ($config['use_smtp'] === true) {
-            $message = '<div style="text-align: center; background-color: #fff;"><img src="https://i.postimg.cc/wBj1pNyx/cevi-wetzikon.png" height="80" alt="Cevi Wetzikon Pool Tool"></div>';
-            $message .= '<br><hr><br>';
+            $message = '<div style="text-align: center; background-color: #e1e1e1; padding: 20px;"><img src="https://i.postimg.cc/KjVgCXz4/Cevi-Wetikon-horizontal-schwarz.png" height="50" alt="Cevi Wetzikon Pool Tool"></div>';
+            $message .= '<br><br>';
             $message .= 'Liebe/r ' . Utils::htmlMailEscape($form->admin_name);
             $message .= '<br/><br/>';
             $message .= 'Deine Umfrage "' . Utils::htmlMailEscape($form->title) . '" wurde soeben erstellt.';

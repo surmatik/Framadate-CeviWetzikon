@@ -28,6 +28,7 @@ RUN cat /var/www/framadate/css/custom-style.css >> /var/www/framadate/css/style.
 
 COPY ./framadate/php-create_classic_poll.php /var/www/framadate/create_classic_poll.php
 COPY ./framadate/php-create_date_poll.php /var/www/framadate/create_date_poll.php
+COPY ./framadate/php-MailService.php /var/www/framadate/app/classes/Framadate/Services/MailService.php
 
 COPY ./framadate/framadate-dejson-changes.txt /var/www/framadate/locale/framadate-dejson-changes.txt
 COPY ./framadate/script-dejsonchanges.sh /var/www/framadate/locale/script-dejsonchanges.sh
