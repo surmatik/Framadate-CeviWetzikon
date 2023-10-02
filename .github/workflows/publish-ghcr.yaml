@@ -20,6 +20,6 @@ jobs:
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           
-      - name: Execute Webhook
+      - name: Trigger Portainer Webhook
         run: |
-          curl -X POST https://portainer.surmatik.ch/api/webhooks/26173694-7824-413c-9ae0-9ccc760de4cc
+          curl -X POST -d '{}' https://portainer.surmatik.ch/api/webhooks/0e536cfd-8e6f-4091-994f-3795776746a7
