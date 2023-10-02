@@ -17,7 +17,7 @@ jobs:
           
       - name: Set up Tailscale
         run: |
-          curl -fsSL https://pkgs.tailscale.com/stable/tailscale_${TAILSCALE_VERSION}_amd64.tgz | tar -xzC /usr/local/bin
+          curl -fsSL https://pkgs.tailscale.com/stable/tailscale_amd64.tgz | tar -xzC /usr/local/bin
           tailscale up --authkey=${{ secrets.TAILSCALE_AUTHKEY }}
           
       - name: Execute Webhook
