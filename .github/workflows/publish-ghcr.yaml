@@ -1,4 +1,4 @@
-name: Docker-Image CI für GHCR
+name: 🐳 Docker-Image CI für GHCR
 
 on:
   push:
@@ -8,18 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Bild erstellen
+      - name: 🏗️ Bild erstellen
         run: docker build . --tag ghcr.io/surmatik/framadate-ceviwetzikon:latest
-      - name: Bei GHCR anmelden und veröffentlichen
+      - name: 🚀 Bei GHCR anmelden und veröffentlichen
         run: |
           echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u surmatik --password-stdin
           docker push ghcr.io/surmatik/framadate-ceviwetzikon:latest
           
-      - name: Tailscale
+      - name: 🛡️ Tailscale
         uses: tailscale/github-action@v2
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           
-      - name: Trigger Portainer Webhook
+      - name: 🔵 Trigger Portainer Webhook
         run: |
           curl -X POST -d '{}' https://portainer.surmatik.ch/api/webhooks/0e536cfd-8e6f-4091-994f-3795776746a7

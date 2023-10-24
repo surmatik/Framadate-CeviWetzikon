@@ -22,3 +22,4 @@
 "This is the message you have to send to the people you want to poll. \nNow, you have to send this message to everyone you want to poll.": "<h2>Cevi Wetzikon Pool Tool</h2><hr>Liebe/r Ceviander/in<br><br/>Dies ist die Nachricht und den Link an die Umfrageteilnehmer."
 "Polls sent": "Umfragen abgeschickt! Du solltest jetzt eine Mail bekommen haben, mit allen Umfragen die du bereits erstellt hast. Über den Link der Umfrage im Mail, kannst du die Umfrage direkt bearbeiten.",
 "List of your polls": "Liste deiner Umfragen"
+"Framadate is an online service for planning an appointment or make a decision quickly and easily.": "Das Tool für Planung von Höcks, Anlässen und mehr!",

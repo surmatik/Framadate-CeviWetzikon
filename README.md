@@ -1,16 +1,19 @@
 # Framadate-Docker Cevi Wetzikon
 
-Ziel: eigene Nuddel / Doodle Alternative für den Cevi Wetzikon
+Nuddle / Doodle alternative for the Cevi Wetzikon
 
-## ToDos
-
-Alle ToDos sind in auf [Todoist](https://todoist.com/app/project/2319220360)
+<img src="framadate/images/framadate.png" style="width: 400px" />
 
 ## Deployment
 
-Das Cevi Wetzikon Pool Tool kann via Docker Compose deployed werden.
+### Github Action
+With the Dockerfile and the Github Action, an image is automatically created, which is then uploaded to the GitHub Container Registry and automatically deployed on pool.cevi-wetzikon.ch via Tailscale and Portainer Webhook.
 
-Docker Compose:
+<img src="framadate/images/GithubAction.png" style="width: 600px" />
+
+
+
+## Docker Compose
 ```bash
 version: '3'
 services:
@@ -35,21 +38,30 @@ services:
 
 volumes:
   mysql_data:
-
 ```
-Die ENV Variablen MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD können in einem '.env' File gespeichert werden oder in Portainer hinterlegt werden.
+Environment variables:
 
-Achtung: Um sicherzustellen, dass die Datenbank und die Framadate Config korrekt funktionieren, sollte das Volume bei der ersten Bereitstellung von Framadate auskommentiert werden:
-```bash
-# volumes:
-#      - /opt/docker/framadate-ceviwetzikon/framadate-config.php:/var/www/framadate/app/inc/config.php
-```
-Danach kann das Volume wieder entkommentiert werden, damit die Config Datei nicht bei jedem Neustart des Containers neu konfiguriert werden muss.
+- MYSQL_ROOT_PASSWORD
+- MYSQL_DATABASE
+- MYSQL_USER
+- MYSQL_PASSWORD
+
+<br><br>
+To make the first deployment work, when starting the Docker Compose for the first time, the volume part for Framadate needs to be temporarily deleted since the config.php and the database creation are done via a setup on the Webserver.
+
 
 ## Database
+
+The database configuration must be provided as follows during the setup on the web:
+
 DB Server Name: mysql:host=mysql;dbname=framadate;port=3306 <br>
 DB User: framadate <br>
 DB Password: your_password
 
+Framadate uses the following five tables in the MySQL database:
 
-<img src="/framadate/images/framadate.png" style="width: 600px" />
+- fd_comment
+- fd_framadate_migration
+- fd_poll
+- fd_slot
+- fd_vote

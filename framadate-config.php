@@ -92,7 +92,7 @@ $config = [
         'host' => 'smtp.gmail.com',              // SMTP server (you could add many servers (main and backup for example) : use ";" like separator
         'auth' => true,                    // Enable SMTP authentication
         'username' => 'pooltoolceviwetzikon@gmail.com',                   // SMTP username
-        'password' => 'xiyhcrlwqopjvkcm',                   // SMTP password
+        'password' => '123',                   // SMTP password
         'secure' => 'ssl',                     // Enable encryption (false, tls or ssl)
         'port' => 465,                       // TCP port to connect to
     ],
