@@ -2,18 +2,27 @@
 
 Nuddle / Doodle alternative for the Cevi Wetzikon
 
-<img src="framadate/images/framadate.png" style="width: 400px" />
+Website available on [pool.cevi-wetzikon.ch](https://pool.cevi-wetzikon.ch)
 
-## Deployment
+<img src="framadate/images/framadate.png" style="width: 500px" />
 
-### Github Action
-With the Dockerfile and the Github Action, an image is automatically created, which is then uploaded to the GitHub Container Registry and automatically deployed on pool.cevi-wetzikon.ch via Tailscale and Portainer Webhook.
+## 🚀 Deployment
 
-<img src="framadate/images/GithubAction.png" style="width: 600px" />
+### 🐙 Github Action
+With the [Dockerfile](Dockerfile) and the [Github Action](.github/workflows/publish-ghcr.yaml), an image is automatically created, which is then uploaded to the GitHub Container Registry and automatically deployed on pool.cevi-wetzikon.ch via Tailscale and Portainer Webhook.
+
+<img src="framadate/images/GithubAction.png" />
 
 
+## 🐳 Docker Compose
 
-## Docker Compose
+The Cevi Wetzikon Pool Tool with the two containers is deployed on the Docker Ubuntu Server from Lino.
+
+<img src="framadate/images/DockerContainerNetzwerk.png" />
+<br><br>
+The following Docker Compose is used in Portainer on the Docker Ubuntu Server from Lino, where the custom Framadate image is re-pulled directly via Portainer Webhook.
+<br><br>
+
 ```bash
 version: '3'
 services:
@@ -50,7 +59,7 @@ Environment variables:
 To make the first deployment work, when starting the Docker Compose for the first time, the volume part for Framadate needs to be temporarily deleted since the config.php and the database creation are done via a setup on the Webserver.
 
 
-## Database
+## 📊 Database
 
 The database configuration must be provided as follows during the setup on the web:
 
@@ -65,3 +74,20 @@ Framadate uses the following five tables in the MySQL database:
 - fd_poll
 - fd_slot
 - fd_vote
+
+## 🚀 Local Deployment
+
+1. Clone the [Framadate-CeviWetzikon](https://github.com/surmatik/Framadate-CeviWetzikon.git) Repoistory from Github.
+    ```bash
+    git clone https://github.com/surmatik/Framadate-CeviWetzikon.git
+    ```
+
+2. Build the image from the Dockerfile
+    ```bash
+    docker compose build
+    ```
+
+3. start the containers with the 'docker-compose.yml'.
+    ```bash
+    docker compose up -d
+    ```
