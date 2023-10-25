@@ -23,7 +23,7 @@
             <div class="footer-column footer-column-2">
                 <div class="footer-title">Weiteres</div>
                 <ul class="footer-links">
-                    <li><a href="https://cevi-wetzikon.ch/jungschar/" target="_blank"">Jahresprogramm Cevi Wetzikon</a></li>
+                    <li><a href="https://uptime.linoo.ch/status/ceviwetzikon-pooltool/" target="_blank"">System Status</a></li>
                     <li><a href="https://db.cevi.ch/" target="_blank">Cevi DB</a></li>
                     <li><a href="https://wiki.cevi.ch/" target="_blank">Cevi Wiki</a></li>
                 </ul>

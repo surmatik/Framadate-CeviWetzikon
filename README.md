@@ -21,7 +21,7 @@ The Cevi Wetzikon Pool Tool with the two containers is deployed on the Docker Ub
 <img src="framadate/images/DockerContainerNetzwerk.png" />
 <br><br>
 The following Docker Compose is used in Portainer on the Docker Ubuntu Server from Lino, where the custom Framadate image is re-pulled directly via Portainer Webhook.
-<br><br>
+<br>
 
 ```bash
 version: '3'
